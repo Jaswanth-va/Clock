@@ -1,0 +1,562 @@
+body{
+    background-color:transparent;
+    margin:0px;
+    font-family: "Anta", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-variant-numeric:tabular-nums;
+    position: relative;
+}
+#nav_bar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+}
+#clock_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top:50px;
+    gap:2px;
+
+}
+#date_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#date_container .leaves{
+    width:fit-content;
+    padding-block: 0px;
+}
+.nav_buttons{
+    color: rgb(25,25,25);
+    text-decoration: none;
+    text-align: center;
+    padding:5px;
+    padding-top: 20px;
+    border:none;
+    border-radius:0px;
+    background-color:transparent;
+    font-size: medium;
+    font-weight: bold;
+    font-family: "Anta", sans-serif;
+
+
+}
+.leaves{
+    font-size:70px;
+    width:110px;
+    text-align: center;
+    background-color:transparent;
+    padding-block:6px;
+    color:black;
+    margin-block:0px;
+    color:#00FFFF;
+    text-shadow: 3px 3px 3px grey;
+    
+}
+.alarms{
+    font-size: 30px;
+    margin:0;   
+    margin-left:25px;
+    padding:10px;
+   
+}
+.alarm_divs{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-block:15px;
+    border-radius:10px;
+    background-color: #00FFFF;
+    margin-bottom:10px;
+    padding-inline:10px;
+    box-shadow: 3px 3px 3px grey;
+    background-image: linear-gradient(to right,black 90px, #00FFFF 90px);
+    width:300px;
+}
+
+#clock_container,#stopwatch_container,.timer_container{
+display: flex;
+justify-content: center;
+align-items: center;
+padding-top:40px;
+}
+.buttons{
+width:120px;
+padding:10px;
+background-color: transparent;
+border:none;
+/* margin:0 12px; */
+border-radius: 5px 5px 5px 5px;
+font-size: 22px;
+text-align: center;
+font-weight:normal;
+font-family: inherit;
+}
+.small_buttons{
+    background-color: transparent;
+    font-family: inherit;
+    width:70px;
+    border:none;
+    /* text-align: left; */
+}
+#stopwatch_buttons,#timer_buttons{
+display:flex;
+justify-content: center;
+}
+.timer_name{
+    font-size: medium;
+    /* text-decoration: underline; */
+    /* text-shadow: 1px 1px 1px transparent; */
+    height:100%;
+    color:#00FFFF;
+    background-color: black;
+    /* border-radius:10px 0px 0px 10px; */
+}
+.alarm_name{
+    font-size: medium;
+    /* text-decoration: underline; */
+    /* text-shadow: 1px 1px 1px ; */
+    color:#00FFFF;
+    margin-left:5px;
+    padding:5px;
+}
+/* svg{
+    text-shadow: 1px 1px 1px transparent;
+} */
+.start_button{
+background-color: transparent;
+font-family: inherit;
+}
+.reset_button{
+    background-color: transparent;
+font-family: inherit;
+}
+.stop_button{
+    background-color: transparent;
+font-family: inherit;
+}
+.continue_button{
+    background-color: transparent;
+font-family: inherit;
+}
+#stopwatch_lap_button{
+    background-color: transparent;
+font-family: inherit;
+}
+body::-webkit-scrollbar {
+display: none;
+}
+#laps_container{
+    background-color: transparent;
+    display: flex;
+    flex-direction: column-reverse;
+    position: relative;
+}
+#onscreen_numpad{
+    display:none; 
+}
+.containers{
+    display:flex;
+    justify-content: space-between;
+    /* gap:10px; */
+    background-color: transparent;
+}
+.laps{
+    background-color: transparent;
+    /* padding:10px; */
+    width:100px;
+    margin:0px;
+    margin-top:5px;
+    font-size: smaller;
+    font-weight: normal;
+    /* padding-inline:30px; */
+}
+.laps p{
+    background-color: transparent;
+}
+#timer_list{
+    padding-top:40px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+.timer_containers{
+    display:flex;
+    justify-content: center;
+    background-image:linear-gradient(to right,black 80px, #00FFFF 80px);
+    width:fit-content;
+    padding-inline:10px;
+    padding-block:10px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px grey;
+    margin-bottom:10px;
+}
+.actual_timer_div_class{
+    display:flex;
+    /* gap:5px; */
+}
+.stop_reset_div_class{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+#create_new_alarm_button{
+    background-color: transparent;
+    font-family: inherit;
+}
+.delete_button_div_class{
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: center;
+    /* height:50%; */
+    /* align-self: center; */
+}
+.alarm_delete_buttons{
+    background-color: transparent;
+    font-family: inherit;
+    /* width:70px; */
+    border:none;
+    /* text-align: left; */
+}
+#Add_new_timer_button{
+    position:fixed;
+    bottom:100px;
+    border-radius: 30px;
+    background-color: #00FFFF;
+    /* color:#00FFFF; */
+    /* width:fit-content; */
+    height: 60px;
+    width:60px;
+    box-shadow: 3px 3px 3px grey;
+    /* text-shadow: 1px 1px 1px grey; */
+    padding-bottom:5px;
+}
+.timer_para{
+    font-size: 50px;
+    padding-block:5px;
+    padding-inline:0;
+    background-color: #00FFFF;
+    margin:0px;
+    /* border-radius: 5px; */
+    width:75px;
+    text-align:center;
+    /* text-shadow: 1px 1px 1px transparent; */
+}
+.new_alarm_page{
+    display:flex;
+    flex-direction: column;
+}
+#alarm_page{
+    display: flex;
+    justify-content: center;
+}
+
+#laps_container::-webkit-scrollbar{
+    display: none;
+}
+#lap_div{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width:300px;
+    /* background-image:linear-gradient(to bottom,  black,black); */
+    background-color:#00FFFF;
+    /* color:#00FFFF; */
+    color:black;
+    border-radius: 10px;
+    padding-bottom: 50px;
+    height:50vh;
+    overflow: scroll;
+    /* box-shadow: 0px 0px 10px black inset; */
+    /* border-top:5px solid black; */
+    padding-inline:30px;
+    box-shadow: 0px 0px 10px grey;
+    background-image: linear-gradient(to bottom,black 35px, #00FFFF 35px);
+}
+#lap_div::-webkit-scrollbar{
+    display: none;
+}
+.colon{
+    width:fit-content;
+    padding-inline: 2px;
+    align-self:flex-start;
+    font-size:41px;
+    text-align: center;
+    text-shadow: none;
+    background-color: #00FFFF;
+    color:black;
+    /* text-shadow:1px 1px 1px transparent; */
+}
+#add_new_alarm_button{
+    position:fixed;
+    bottom:100px;
+    border-radius: 30px;
+    background-color: #00FFFF;
+    height: 60px;
+    width:60px;
+    box-shadow: 3px 3px 3px grey;
+    /* text-shadow: 1px 1px 1px transparent; */
+    border:none;
+    font-family: inherit;
+    padding-bottom: 5px;
+}
+#new_alarm_page{
+    padding-top:40px;
+}
+input{
+    padding:10px;
+    height:70px;
+    width:70px;
+    border:none;
+    font-family: inherit;
+    text-align: center;
+    font-size: 50px;
+    border:2px solid grey;
+    color:#00FFFF;
+    text-shadow:3px 3px 3px grey;
+    border-radius: 10px;
+    /* box-shadow: 0px 0px 5px  grey; */
+
+}
+#change_meridiam_button{
+    border:2px solid grey;
+    height:95px;
+    width:90px;
+    font-family: inherit;
+    text-align: center;
+    font-size: 50px;
+    background-color:transparent;
+    color:#00FFFF;
+    text-shadow:3px 3px 3px gray;
+    border-radius: 10px;
+}
+#change_meridiam_button:hover{
+    box-shadow: 0px 0px 10px inset grey;
+
+}
+input:focus,input:hover {
+    outline:none;
+    box-shadow: 0px 0px 10px inset grey;
+
+}
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
+
+input[type=number] {
+-moz-appearance:textfield;
+appearance: auto;
+}
+#alarm_list{
+    padding-top:40px;
+    flex-direction: column-reverse;
+}
+
+#back_button{
+    fill: black;
+}
+#blur_screen{
+    display: none;justify-content: center;height:100vh;position:absolute;width:100%;background-color:transparent;z-index:2
+}
+#alarm_indicator{
+    width:400px;margin-top:60px;height:200px;background-color:#00FFFF;border-radius:20px;border:0px solid black;box-shadow:0px 0px 7px grey;z-index:2;display:flex;flex-direction:column;align-items: center;justify-content: space-evenly;
+}
+.colons{
+    width:fit-content;
+    padding: 0px;
+    align-self:flex-start;
+    background-color: transparent;
+}
+.delete_button_div_class svg{
+    width:30px;
+    height:30px;
+}
+#alarm_delete_button{
+    width:40px;
+    height:40px;
+}
+#lap_div_heading{
+    color:#00FFFF;
+    display:none;
+    justify-content:space-between;
+    width:100%;
+    margin-bottom:10px;
+    position:sticky;
+    top:0;
+    background-color:black;
+    z-index:1;
+}
+body::-webkit-scrollbar{
+    display: none;
+}
+/* svg{
+    width:20px;
+    height:20px;
+} */
+@media (max-width:500px){
+   .leaves{
+    font-size: 45px;
+    width:70px;
+    text-shadow: 3px 3px 2px grey;
+    background-color: transparent;
+
+   }
+   .alarms{
+    font-size: 25px;
+    margin:0;   
+    margin-left:25px;
+    padding:5px;
+}
+.alarm_divs{
+    padding-block:15px;
+    padding-inline: 10px;
+    border-radius:10px;
+    margin-bottom:5px;
+    box-shadow: 3px 3px 3px grey;
+    background-image: linear-gradient(to right,black 70px, #00FFFF 714.24l);
+    width:260px;
+}
+
+#change_meridiam_button:hover{
+    box-shadow: none;
+}
+#change_meridiam_button:active{
+    box-shadow: 0px 0px 10px inset grey;
+
+}
+svg{
+    width:25px;
+    height:25px;
+    padding-top:3px;
+}
+#alarm_indicator{
+    width:250px;height:200px;
+}
+#alarm_indicator svg{
+    height:100px;
+    width:100px;
+}
+.colons{
+    width:fit-content;
+    padding: 0px;
+    align-self:center;
+    margin-bottom:4px;
+    font-size: 40px;
+}
+.timer_para{
+    font-size: 30px;
+    padding-inline:0;
+    background-color: #00FFFF;
+    margin:0px;
+    width:45px;
+    text-align:center;
+    height:45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.timer_containers{
+    background-image:linear-gradient(to right,black 80px, #00FFFF 80px);
+    width:fit-content;
+    padding:10px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px grey;
+    margin-bottom:10px;
+    width:300px;
+    display:flex;
+    justify-content: right;
+    align-items: center;
+}
+.colon{
+    width:fit-content;
+    padding-inline: 3px;
+    align-self:flex-start;
+    margin-top: 4px;
+    font-size:26px;
+    text-align: center;
+    text-shadow: none;
+    background-color: #00FFFF;
+    color:black;
+}
+.small_buttons{
+    background-color: transparent;
+    font-family: inherit;
+    width:50px;
+    border:none;
+    /* text-align: left; */
+}
+.timer_name{
+    font-size: small;
+    width:fit-content;
+    /* text-decoration: underline; */
+    /* text-shadow: 1px 1px 1px transparent; */
+    color:#00FFFF;
+    padding-block: 10px;
+    background-color: black;
+    /* border-radius:10px 0px 0px 10px; */
+    text-align: center;
+}
+.alarm_name{
+    font-size: small;
+    margin-left:10px;
+
+}
+.delete_button_div_class{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-right:30px;
+}
+
+.delete_button_div_class svg{
+    width:23px;
+    height:23px;
+    padding-top:3px;
+    fill:#00FFFF;
+}
+#lap_div{
+    
+    width:100%;
+    border-radius: 0px;
+    padding-bottom: 50px;
+    height:70vh;
+}
+#timer_buttons{
+    display:none;
+}
+#onscreen_numpad{
+    width:fit-content;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top:100px;
+    gap:3px;
+
+}
+.numpad_button{
+    font-size: 25px;
+    font-family: inherit;
+    height:80px;
+    width:80px;
+    background-color: black;
+    color:#00FFFF;
+    border:0;
+    border-radius: 50%;
+    
+}
+body::-webkit-scrollbar{
+    display: none;
+}
+#numpad_timer_cancel_button{
+    display:none;
+}
+}

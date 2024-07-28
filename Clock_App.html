@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clock</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anta&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div id="blur_screen">
+    <div id="alarm_indicator">
+        <h3 style="font-family: inherit;font-weight: normal;">Alarm </h3>
+        <svg width="198px" height="198px" viewBox="0 0 1024 1024" class="icon" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M688.4 469.6c-197.5-43.3-35.6-317.2-306.2-294.5S-145 820.9 335.4 966.8s728-415 353-497.2z" fill="#464BD8"></path><path d="M318.4 811.1c-1.8 0-3.6-0.5-5.2-1.7l-15.6-11.1c-3.8-2.7-4.9-8-2.4-12l52-84.1c1.3-2.1 3.4-3.6 5.8-4.1 0.6-0.1 1.2-0.2 1.8-0.2 1.8 0 3.7 0.6 5.2 1.7l26.3 18.7c2 1.4 3.3 3.6 3.7 6.1 0.3 2.5-0.4 4.9-1.9 6.9l-62.7 76.5a9.15 9.15 0 0 1-7 3.3z" fill="#464BD8"></path><path d="M354.8 706.9l26.3 18.7-62.7 76.5-15.6-11.1 52-84.1m0-17.9c-1.2 0-2.4 0.1-3.5 0.4-4.9 1-9.1 3.9-11.7 8.1l-52 84.1c-5 8-2.8 18.5 4.8 24l15.6 11.1c3.1 2.2 6.8 3.3 10.4 3.3 5.2 0 10.3-2.3 13.9-6.6l62.7-76.5c3.1-3.8 4.5-8.8 3.9-13.7-0.7-4.9-3.3-9.3-7.3-12.2l-26.3-18.7c-3.2-2.1-6.8-3.3-10.5-3.3z" fill="#151B28"></path><path d="M628.8 811.1c-2.6 0-5.2-1.1-6.9-3.3l-62.7-76.5a8.57 8.57 0 0 1-1.9-6.9c0.3-2.5 1.7-4.7 3.7-6.1l26.3-18.7c1.5-1.1 3.3-1.7 5.2-1.7 0.6 0 1.2 0.1 1.8 0.2 2.4 0.5 4.5 2 5.8 4.1l52 84.1c2.5 4 1.4 9.3-2.4 12L634 809.5a8.66 8.66 0 0 1-5.2 1.6z" fill="#514DDF"></path><path d="M592.5 706.9l52 84.1-15.6 11.1-62.7-76.5 26.3-18.7m0-17.9c-3.7 0-7.3 1.1-10.4 3.3L555.8 711c-4 2.9-6.7 7.3-7.3 12.2-0.7 4.9 0.8 9.9 3.9 13.7l62.7 76.5a17.97 17.97 0 0 0 24.3 3.3l15.6-11.1c7.7-5.5 9.8-16 4.8-24l-52-84.1c-2.6-4.2-6.8-7.2-11.7-8.1-1.3-0.2-2.5-0.4-3.6-0.4z" fill="#151B28"></path><path d="M337.658721 732.820568a192.2 192.2 0 1 0 271.811847-271.811847 192.2 192.2 0 1 0-271.811847 271.811847Z" fill="#FFFFFF"></path><path d="M473.6 414c101 0 182.9 81.9 182.9 182.9s-81.9 182.9-182.9 182.9S290.7 698 290.7 596.9 372.6 414 473.6 414m0-18.5c-27.2 0-53.6 5.3-78.4 15.8-24 10.1-45.5 24.7-64 43.2-18.5 18.5-33 40-43.2 64-10.5 24.8-15.8 51.2-15.8 78.4s5.3 53.6 15.8 78.4c10.1 24 24.7 45.5 43.2 64 18.5 18.5 40 33 64 43.2 24.8 10.5 51.2 15.8 78.4 15.8s53.6-5.3 78.4-15.8c24-10.1 45.5-24.7 64-43.2 18.5-18.5 33-40 43.2-64 10.5-24.8 15.8-51.2 15.8-78.4s-5.3-53.6-15.8-78.4c-10.1-24-24.7-45.5-43.2-64-18.5-18.5-40-33-64-43.2a200.03 200.03 0 0 0-78.4-15.8z" fill="#151B28"></path><path d="M485.4 609.5m-141.5 0a141.5 141.5 0 1 0 283 0 141.5 141.5 0 1 0-283 0Z" fill="#2AEFC8"></path><path d="M473.6 453.6c79.2 0 143.3 64.2 143.3 143.3s-64.2 143.3-143.3 143.3S330.3 676 330.3 596.9s64.1-143.3 143.3-143.3m0-9.4c-40.8 0-79.2 15.9-108 44.7-28.9 28.9-44.7 67.2-44.7 108s15.9 79.2 44.7 108c28.9 28.9 67.2 44.7 108 44.7s79.2-15.9 108-44.7c28.9-28.9 44.7-67.2 44.7-108s-15.9-79.2-44.7-108a151.81 151.81 0 0 0-108-44.7z" fill="#151B28"></path><path d="M288.7 473.4c-3.2 0-6.1-1.6-7.8-4.3a80.9 80.9 0 0 1-12.6-46c0.6-21.6 9.4-41.8 25-56.9a81.87 81.87 0 0 1 57.4-23.4h2.2c23.2 0.6 45 11 59.9 28.4 2.1 2.4 2.7 5.7 1.8 8.8s-3.4 5.4-6.5 6.2c-46.4 12.4-86 41.7-111.4 82.8a9.47 9.47 0 0 1-8 4.4z" fill="#FFFFFF"></path><path d="M350.6 352.1h1.9c21.3 0.6 40.3 10.2 53.1 25.2-49 13-90.7 44.6-116.9 86.8a72.62 72.62 0 0 1-11.2-40.8c1-39.6 33.6-71.2 73.1-71.2m0-18.5c-24 0-46.7 9.2-63.9 26a91.45 91.45 0 0 0-27.8 63.3c-0.5 18.2 4.4 35.9 14.1 51.2 3.4 5.4 9.3 8.6 15.6 8.6h0.1c6.4 0 12.3-3.4 15.6-8.8 24.2-39 61.8-66.9 105.9-78.7a18.5 18.5 0 0 0 9.3-29.9 90.79 90.79 0 0 0-66.7-31.7h-2.2z" fill="#151B28"></path><path d="M658.5 473.4c-3.2 0-6.1-1.7-7.8-4.4-25.4-41-65-70.4-111.4-82.8-3.1-0.8-5.5-3.2-6.5-6.2-0.9-3-0.3-6.3 1.8-8.8a81.34 81.34 0 0 1 59.9-28.4h2.2c21.5 0 41.9 8.3 57.4 23.4a82.25 82.25 0 0 1 25 56.9c0.4 16.4-3.9 32.3-12.6 46a9.61 9.61 0 0 1-8 4.3z" fill="#FFFFFF"></path><path d="M596.6 352.1c39.5 0 72.1 31.6 73.1 71.3 0.4 15-3.8 29.1-11.2 40.8a197.35 197.35 0 0 0-116.9-86.8c12.7-15 31.8-24.6 53.1-25.2 0.7 0 1.3-0.1 1.9-0.1m0-18.5h-2.4c-25.8 0.7-50.1 12.2-66.7 31.7-4.1 4.8-5.5 11.5-3.6 17.5 1.9 6.1 6.8 10.7 12.9 12.4 44.1 11.7 81.8 39.7 105.9 78.7 3.4 5.4 9.3 8.7 15.6 8.8h0.1c6.3 0 12.2-3.2 15.6-8.6 9.7-15.3 14.6-33 14.1-51.2-0.6-24-10.5-46.5-27.8-63.3-17-16.8-39.7-26-63.7-26z" fill="#151B28"></path><path d="M473.6 606.2c-5.1 0-9.3-4.1-9.3-9.3v-89.8c0-5.1 4.1-9.3 9.3-9.3s9.3 4.1 9.3 9.3v89.8c0 5.2-4.2 9.3-9.3 9.3z" fill="#151B28"></path><path d="M513.9 629.8c-1.6 0-3.2-0.4-4.7-1.3l-40.3-23.6a9.3 9.3 0 0 1-3.3-12.7 9.3 9.3 0 0 1 12.7-3.3l40.3 23.6a9.3 9.3 0 0 1 3.3 12.7 9.1 9.1 0 0 1-8 4.6z" fill="#151B28"></path></g></svg>
+        <button style="background-color: transparent;font-size: medium;font-weight: bold;" class="buttons">stop</button>
+    </div>
+    </div>
+    <nav>
+        <div id="nav_bar">
+            <button id="clock_button" class="nav_buttons" onclick="navigator(0)" style="color:#00FFFF;text-shadow:1px 1px 1px grey">clock</button>
+            <button id="alarm_button" class="nav_buttons" onclick="navigator()">alarm</button>
+            <button id="stopwatch_button" class="nav_buttons" onclick="navigator(1)">stopwatch</button>
+            <button id="timer_button" class="nav_buttons" onclick="navigator(2);numpad_event_listener()">timer</button>
+        </div>
+    </nav>
+    <div id="clock_page" style="display: block;">
+        <div id="clock_container">
+            <p class="leaves" id="clock_hour"></p><span class="leaves colons">:</span>
+            <p class="leaves" id="clock_min"></p><span class="leaves colons">:</span>
+            <p class="leaves" id="clock_sec"></p>
+            <p class="leaves" id="clock_meridiem"></p>
+        </div>
+        <div id="date_container">
+            <p class="leaves" id="clock_day"></p><span class="leaves"  style="width:fit-content;padding-right:10px;align-self:flex-start;background-color: transparent;">, </span>
+            <p class="leaves" id="clock_date"></p>
+        </div>
+    </div>
+    <div id="stopwatch_page" style="display: none;">
+        <div id="stopwatch_container">
+            <div id ="stopwatch_hour_span" style="display:none"><p class="leaves" id="stopwatch_hour">00</p><span class="leaves colons" >:</span></div>
+            <div id ="stopwatch_min_span" style="display:none"><p class="leaves" id="stopwatch_min" >00</p><span class="leaves colons" >:</span></div>
+            <p class="leaves" id="stopwatch_sec">00</p><span class="leaves colons" >:</span>
+            <p class="leaves" id="stopwatch_csec">00</p>
+        </div>
+        <div id="stopwatch_buttons">
+            <button id="stopwatch_start_button" class="buttons start_button" onclick="stopwatch_start()">start</button>
+            <button id="stopwatch_reset_button" class="buttons reset_button" onclick="stopwatch_reset()" style="display:none">reset</button>
+            <button id="stopwatch_stop_button" class="buttons stop_button" onclick="stopwatch_stop()" style="display:none">stop</button>
+            <button id="stopwatch_continue_button" class="buttons continue_button" onclick="stopwatch_continue()" style="display:none">start</button>
+            <button id="stopwatch_lap_button" class="buttons" style="display:none" onclick="add_lap()">lap</button>
+        </div>
+        <div style="display: flex;justify-content: center;padding-top:30px">
+                <div id="lap_div">
+                    <div id="lap_div_heading">
+                    <h4 style="margin:0;margin-top:10px;margin-bottom:5px;font-weight: normal;font-size: medium;">lap</h4>
+                    <h4 style="margin:0;margin-top:10px;margin-bottom:5px;font-weight: normal;font-size: medium;">time</h4>
+                    <h4 style="margin:0;margin-top:10px;margin-bottom:5px;font-weight: normal;font-size: medium;">total</h4>
+                </div>
+                <div id="laps_container" style="width:100%;background-color:transparent;">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="timer_page" style="display:none">
+        <div class="timer_container" id="timer_container_id">
+            <p class="leaves" id="timer_hour">00</p><span class="leaves colons">:</span>
+            <p class="leaves" id="timer_min">00</p><span class="leaves colons">:</span>
+            <p class="leaves" id="timer_sec">00</p>
+        </div>
+        <div id="timer_buttons">
+            <button id="timer_start_button" class="buttons start_button" onclick="timer_start()">start</button>
+            <button id="timer_cancel_button" class="buttons" style="display:none" onclick="navigator(2)">back</button>
+        </div>
+        <div style="display:flex;justify-content: center;">
+        <div id="onscreen_numpad">
+            <button class="numpad_button" onclick="numpad(1)">1</button>
+            <button class="numpad_button vertical" onclick="numpad(2)">2</button>
+            <button class="numpad_button horizontal" onclick="numpad(3)">3</button>
+            <button class="numpad_button" onclick="numpad(4)">4</button>
+            <button class="numpad_button vertical" onclick="numpad(5)">5</button>
+            <button class="numpad_button" onclick="numpad(6)">6</button>
+            <button class="numpad_button" onclick="numpad(7)">7</button>
+            <button class="numpad_button vertical" onclick="numpad(8)">8</button>
+            <button class="numpad_button" onclick="numpad(9)">9</button>
+            <button class="numpad_button horizontal" onclick="numpad('0')">0</button>
+            <button class="numpad_button vertical" onclick="numpad('Backspace')">del</button>
+            <button class="numpad_button" onclick="timer_start()">start</button>
+            <button class="numpad_button"  id="numpad_timer_cancel_button"  style="display: none;" onclick="navigator(2)">back</button>
+        </div>
+
+        </div>
+        <div id="timer_list">
+        </div>
+        <div style="display:flex;justify-content: center;margin:20px;">
+            <button id="Add_new_timer_button" class="buttons" onclick="addnewtimer()" style="display:none"><svg width="30px" height="30px" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" fill="none"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill="#000000" fill-rule="evenodd" d="M9 17a1 1 0 102 0v-6h6a1 1 0 100-2h-6V3a1 1 0 10-2 0v6H3a1 1 0 000 2h6v6z"></path> </g></svg></button>
+        </div>
+    </div>
+    <div id="alarm_page" style="display:none;">
+        <button id="add_new_alarm_button" class="buttons" onclick="add_new_alarm()" style="display:none;"><svg width="30px" height="30px" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" fill="none"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill="#000000" fill-rule="evenodd" d="M9 17a1 1 0 102 0v-6h6a1 1 0 100-2h-6V3a1 1 0 10-2 0v6H3a1 1 0 000 2h6v6z"></path> </g></svg></button>
+        <div style="display:block" id="new_alarm_page">
+            <div style="display:flex;justify-content: space-between;margin-bottom:2.5px;">
+                <input  type="number" placeholder="12" name="alarm_hour" id="alarm_hour" min="1" max="12" >
+                <input type="number"  placeholder="00" name="alarm_minute" id="alarm_min" min="0" max="59">
+                <button onclick="change_meridiam(this)" id="change_meridiam_button">AM</button>
+            </div>
+            <div style="display:flex;justify-content:space-evenly;" id="alarm_buttons_div">
+                <button id="create_new_alarm_button" class="buttons" onclick="create_new_alarm()">create</button>
+                <button id="alarm_cancel_button" class="buttons" style="display:none" onclick="navigator()">back</button>
+            </div>
+        </div>
+        <div id="alarm_list">
+        </div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>
